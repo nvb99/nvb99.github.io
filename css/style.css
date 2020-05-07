@@ -1,0 +1,438 @@
+/* CSS MAP
+	=> Search by id
+	------------------------
+	id		|	name
+	------------------------
+	css_1		Pre-loader
+	css_2		Custom background
+	css_3		Nav bar css
+	css_4		Main css
+	css_5		section main
+	css_6		section projects
+	css_7		section about
+	css_8		footer css
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: #fff;
+}
+
+/* css_1. ============= PRE-LOADER ============= */
+.preload {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999999999999;
+    transition: opacity 1s ease 0.5s;
+}
+
+.preload h3 {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+    font-size: 20px;
+    color: #333;
+}
+
+.preload img#airplane {
+    width: 200px;
+    animation: airplane 1s infinite alternate;
+}
+
+.preload .cloud1,
+.preload .cloud2,
+.preload .cloud3 {
+    position: absolute;
+    height: 80px;
+    opacity: 0.6;
+    right: 0%;
+    transform: translateX(100%);
+    z-index: -1;
+}
+
+.preload .cloud1 {
+    top: 25%;
+    transform: translateX(100%, -25%);
+    animation: clouds 3s infinite 0s;
+}
+
+.preload .cloud2 {
+    top: 50%;
+    transform: translateX(100%, -50%);
+    animation: clouds 3s infinite 1.5s;
+}
+
+.preload .cloud3 {
+    top: 75%;
+    transform: translateX(100%, -75%);
+    animation: clouds 3s infinite 1s;
+}
+
+.preload-end {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes airplane {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(25px);
+    }
+}
+
+@keyframes clouds {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 130%;
+    }
+}
+
+/* css_2. ======================== CUSTOM BACKGROUND ======================== */
+#star {
+	z-index: -1;
+	background: url('../img/bg-main.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.cover,
+#star{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+	canvas {
+		display: none
+	}
+}
+
+/* css_3. ============= NAV BAR CSS ============= */
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	justify-content: space-around;
+	align-items: center;
+	background: rgba(26, 39, 45, 0.8);
+	min-height: 50px;
+	box-shadow: 0px 2px 2px 0px #888888; /* left top blur scale */
+	line-height: 50px;
+    z-index: 9999;
+    transition: all 1s ease-in-out;
+}
+
+.brand {
+	float: left;
+	cursor: pointer;
+	color: white;
+	padding-left: 15px;
+	font-size: 25px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.brand:hover {
+	text-shadow: 0px 0px 10px #ccc;
+	color: #1596d3;
+	transition: all 0.3s ease;
+}
+.brand:hover span {
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.brand span {
+	color: #1596d3;
+}
+.nav-links {
+	float: right;
+}
+
+.nav-links li {
+	list-style: none;
+	display: inline-block;
+	width: 120px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: lightblue;
+	transition: all 0.3s ease;
+}
+
+.nav-links li:hover a {
+	color: #fff;
+	border-bottom: 2px solid #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+.mobileBar {
+	cursor: pointer;
+	display: none;
+	margin: 10px;
+}
+
+.mobileBar div {
+	background: white;
+	border-radius: 5px;
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.mobileBar {
+		display: block;
+		position: absolute;
+		right: 10px;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 50px;
+		height: calc(100vh - 50px);
+		right: 0px;
+		background:rgba(26, 39, 45, 0.8);
+		text-align: center;
+		justify-content: initial;
+		width: 200px;
+		transform: translateX(100%);
+		transition: transform 0.2s ease-in;
+	}
+
+	.nav-links li {
+		opacity: 1;
+		margin: 20px 0px;
+	}
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+.toggle .bar1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .bar2 {
+	opacity: 0;
+}
+.toggle .bar3 {
+	transform: rotate(45deg) translate(-5px, -6px);	
+}
+
+
+/* css_4. ============= MAIN CSS HERE ============= */
+
+.call-action {
+	font-size: 45px;
+	transition: all 0.5s ease;
+	padding: 5px 0px;
+	animation: callAction 0.5s infinite alternate;
+}
+
+.call-action a {
+	color: white;
+}
+
+#typer {
+	color: #1596d3;
+}
+
+@keyframes callAction {
+	from {
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+	to {
+		padding-top: 10px;
+		padding-bottom: 0px;
+	}
+}
+
+section#home {
+	width: 100%;
+	height: 100%;
+}
+
+/* css_5. ================ SECTION MAIN ========================= */
+section#home > div {
+	height: 100vh;
+	padding: 45vh 0px;
+	text-align: center;
+}
+
+section#home h2 {
+	text-align: center;
+	font-size: 45px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px 3px #999;
+	z-index: 1;
+}
+
+.line-break {
+
+	max-width: 120px;
+	height: 2px;
+	margin: 2px auto;
+	background: #ccc;
+	clear: both;
+}
+
+.em {
+	color: #1596d3;
+}
+
+#tagLine {
+	font-size: 22px;
+	transform: scale(.8);
+	transition: all 0.3s ease;
+	color: #1596d3;
+}
+
+#tagLine:hover {
+	transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+	section#home h2 {
+		font-size: 35px;
+	}
+}
+
+/* css_6. =============== SECTION PROJECTS ================ */
+#projects {
+	background: #1a272d;
+}
+#projects h3 {
+	padding-top: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: white
+}
+#projects h3 span {
+	border-bottom: 2px solid #1596d3;
+}
+
+#projects .project {
+	width: 45%;
+	height: 300px;
+	margin: 2%;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+#projects #prj01 { background: url('../img/projects/pr01.jpg'); background-size: cover; background-position: center center; }
+#projects #prj02 { background: url('../img/projects/pr02.jpg'); background-size: cover; background-position: center center; }
+#projects #prj03 { background: url('../img/projects/pr03.jpg'); background-size: cover; background-position: center center; }
+#projects #prj04 { background: url('../img/projects/pr04.jpg'); background-size: cover; background-position: center center; }
+
+#projects .project .content {
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	background: #0008;
+	padding: 126px 0px;
+	border-radius: 10px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#projects #prj01:hover .content { visibility: visible;}
+
+#projects #prj02:hover .content { visibility: visible;}
+
+#projects #prj03:hover .content { visibility: visible;}
+
+#projects #prj04:hover .content { visibility: visible;}
+
+
+@media only screen and (max-width: 768px) {
+	#projects .project {
+		width: 96%;
+		height: 284px;
+	}
+	#projects .project .content {
+		font-size: 20px;
+	}
+}
+
+/* css_7. =============== SECTION ABOUT ================ */
+
+#about .content {
+	background: #333;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#about .content .half {
+	display: inline-block;
+	padding: 60px 2%;
+	width: 46%;
+	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	#about .content .half {
+		width: 100%;
+	}
+
+	#about .content .half:first-child {
+		margin-bottom: -60px;
+	}
+}
+
+/* css_8. =============== footer css ================ */
+
+footer {
+	clear: both;
+	padding: 10px 0px;
+	text-align: center;
+	background: #000;
+	color: #999;
+}
+
+.social-links a, .footer-links a {
+	text-decoration: none;
+	color: #ccc;
+	padding: 0px 10px;
+}
+
+.social-links a:hover, .footer-links a:hover {
+	color: #fff;
+}

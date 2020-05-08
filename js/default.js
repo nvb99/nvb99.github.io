@@ -23,6 +23,7 @@ const navSlide = () => {
 }
 navSlide();
 /* ============= BACKGROUND HOVER EFFECT ============= */
+
 let $ = jQuery.noConflict();
 jQuery(function($) {
 	"use strict";

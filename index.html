@@ -6,6 +6,7 @@
 	<meta name="google-site-verification" content="xapDXyDVReKdOJS3hntlisRodAkaNnqLTSnWv5bE0uk" />
         <title>NVB 99 Official</title>
         <link rel="shortcut icon" href="img/ava.jpg">
+        <link rel="stylesheet" href="css/pure.css" />
         <link rel="stylesheet" href="css/style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,7 +36,7 @@ pagead/js/adsbygoogle.js"></script>
                 <ul class="nav-links">
                     <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
-                    <li><a href="#about"><i class="fa fa-address-card"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-address-card"></i> Contact</a></li>
                     <li><a href="http://nvb99.blogspot.com/"><i class="fa fa-rss"></i> My Blog</a></li>
                 </ul>
                 <div class="mobileBar">
@@ -78,15 +79,63 @@ pagead/js/adsbygoogle.js"></script>
                 </div>
             </section>
             
-            <section id="about">
+            <section id="contact">
+                <h3><span>Contact me</span></h3>
                 <div class="content">
-                    <div class="half">
-                        <h2>ABOUT ME</h2>
-                        <img src="img/ava.jpg" width="100%" alt="">
+                    <div class="half" id="profile">
+                        <div class="avar"></div>
+                        <p>
+                            <b>+ Mobile</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('tel:+84979541934')">(097) 954 19 34</b> |
+                            <b>+ Email</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('mailto:tech.nvb99@gmail.com')">tech.nvb99@gmail.com</b> 
+
+                            <hr style="width: 100px; margin: 10px auto;">
+                            <p style="text-align: justify;">Hi everyone, my name is Bảy, you can call me Jason as my Nickname!
+                            I'm a Coder, Web Developer. My hobbies are coding and singing, also traveling.
+                            If you want to host a website (for introducing yourself, or even showing products and selling them, ...),
+                            or you want to learn techniques, feel free to contact me via Social Media or Fill in and Send the Form!
+                            Happy Living! <i class="fa fa-heart"></i></p>
+                            <p class="text-center" style="margin-top: 20px;">
+                                <a href="uploads/MyCV.pdf" class="my-btn" style="background: #1596d3; color: #fff; padding: 5px 20px; border-radius: 5px; text-decoration: none;">See my CV</a>
+                            </p>
+                        </p>
                     </div>
     
                     <div class="half">
-                        <ul>
+                        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+action="https://script.google.com/macros/s/AKfycbxzAmjUvyhmcGTmC3Rtwkb9ftFZsWVpH51D7ATq-I9iwQqOxA/exec">
+                            <!-- change the form action to your script url -->
+
+                            <div class="form-elements">
+                            <fieldset class="pure-group">
+                                <label class="require-label" for="name">What is your name? </label>
+                                <input required id="name" name="name" placeholder="My name is ..." />
+                            </fieldset>
+
+                            <fieldset class="pure-group">
+                                <label class="require-label" for="message">What can I do for you? </label>
+                                <textarea required id="message" name="message" rows="5"
+                                placeholder="I want to ..."></textarea>
+                            </fieldset>
+
+                            <fieldset class="pure-group">
+                                <label class="require-label" for="email">Your Email Address is:</label>
+                                <input id="email" name="email" type="email" value=""
+                                required placeholder="your-name@email.com"/>
+                                <span class="email-invalid" style="display:none">
+                                Must be a valid email address</span>
+                            </fieldset>
+
+
+                            <button class="my-btn button-success" >Send email</button>
+                            </div>
+
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                            <div class="thankyou_message" style="display:none;">
+                            <h2>Thanks for contacting me! I will get back to you soon!</h2>
+                            </div>
+
+                        </form>
+                        <!--<ul>
                             <li>
                                 <h3>Working Experiences:</h3>
                                 <div>
@@ -120,7 +169,7 @@ pagead/js/adsbygoogle.js"></script>
                                 </div>
                             </li>
                             <li>
-                                <h3>Contact:</h3>
+                                <h3>Contact Info:</h3>
                                 <div>
                                     <b>+ Mobile</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('tel:+84979541934')">(097) 954 19 34</b>
                                 </div>
@@ -131,15 +180,20 @@ pagead/js/adsbygoogle.js"></script>
                                     <b>+ Facebook</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('https://www.facebook.com/bay.nv910')">Bảy Nguyễn</b>
                                 </div>
                             </li>
-                        </ul>
+                            <li>
+                                
+                            </li>
+
+                        </ul>-->
                     </div>
+                    <div style="clear: both;"></div>
                 </div>
             </section>
         </main>
     
         <footer>
             <div class="footer-links">
-                <a href="#">Back to top</a>
+                <a href="#" class="my-btn" title="Back to top!" style="background: #1596d3; padding: 5px 10px 0px 10px; border-radius: 50%;"><i class="fa fa-sort-asc"></i></a>
                 <!--<a href="http://nvb99.blogspot.com/">Visit my blog <i class="fa fa-external-link" aria-hidden="true"></i></a>-->
                 <!-- <a onclick="alert('Sorry, it\'s not available at this time!')">Terms and Services</a> -->
             </div>
@@ -158,6 +212,7 @@ pagead/js/adsbygoogle.js"></script>
         <script src="js/plugin.min.js"></script>
         <script src="js/animation.js"></script>
         <script src="js/typed.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
         <script>
             var typed = new Typed("#typer", {
                 strings: [

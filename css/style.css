@@ -9,7 +9,7 @@
 	css_4		Main css
 	css_5		section main
 	css_6		section projects
-	css_7		section about
+	css_7		section about & contact
 	css_8		footer css
 */
 
@@ -28,6 +28,25 @@
 body {
     font-family: 'Baloo 2', cursive;
     background: #fff;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.my-btn {
+	opacity: 0.8;
+	padding: 5px 20px;
+	outline: none;
+	border: none;
+}
+.my-btn:hover {
+	opacity: 1;
+}
+
+.require-label:after {
+	content: ' *';
+	color: red;
 }
 
 /* css_1. ============= PRE-LOADER ============= */
@@ -392,29 +411,99 @@ section#home h2 {
 	}
 }
 
-/* css_7. =============== SECTION ABOUT ================ */
-
-#about .content {
+/* css_7. =============== SECTION ABOUT & CONTACT ================ */
+#contact {
 	background: #333;
+}
+
+#contact .pure-group input, #contact .pure-group textarea {
+	background: none;
+	border-radius: 5px;
+	outline: none;
+}
+
+#contact h3 {
+	padding-top: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: white
+}
+#contact h3 span {
+	border-bottom: 2px solid #1596d3;
+}
+
+#contact .half#profile .avar {
+	background: url(../img/ava.jpg);
+	background-size: cover;
+	background-position: center center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 5px auto;
+	z-index: 2;
+}
+
+#contact .half#profile p {
+	text-align: center;
+	z-index: 1;
+}
+
+#contact .content {
 	width: 100%;
 	margin: 0 auto;
 }
 
-#about .content .half {
-	display: inline-block;
+#contact .content .half {
+	float: left;
 	padding: 60px 2%;
 	width: 46%;
 	color: white;
 }
 
 @media screen and (max-width: 768px) {
-	#about .content .half {
+	#contact .content .half {
 		width: 100%;
 	}
 
-	#about .content .half:first-child {
+	#contact .content .half:first-child {
 		margin-bottom: -60px;
 	}
+}
+
+aside {
+    background: #1f8dd6; /* same color as selected state on site menu */
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 2em;
+}
+textarea {
+  width: 100%;
+}
+.content-head {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
+}
+.is-center {
+  text-align: center;
+}
+.button-success {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65); /* this is a green */
+}
+.button-xlarge {
+  font-size: 125%;
+}
+button {
+  float: right;
+}
+#name, #email {
+  width: 100%;
 }
 
 /* css_8. =============== footer css ================ */

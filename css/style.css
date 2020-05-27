@@ -20,6 +20,18 @@
     scroll-behavior: smooth;
 }
 
+#owl-demo .item{
+	background: #a1def8;
+	padding: 30px 0px;
+	display: block;
+	margin: 5px;
+	color: #FFF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+  }
+
 /* Hide scrollbar */
 ::-webkit-scrollbar {
     width: 0;
@@ -162,9 +174,9 @@ nav {
 	left: 0px;
 	justify-content: space-around;
 	align-items: center;
-	background: rgba(26, 39, 45, 0.8);
+	background: rgba(26, 39, 45, 0.9);
 	min-height: 50px;
-	box-shadow: 0px 2px 2px 0px #888888; /* left top blur scale */
+	box-shadow: 0px 0px 5px #000; /* left top blur scale */
 	line-height: 50px;
     z-index: 9999;
     transition: all 1s ease-in-out;
@@ -213,8 +225,11 @@ nav {
 
 .nav-links li:hover a {
 	color: #fff;
-	border-bottom: 2px solid #fff;
+	background: #000;
+	padding: 3px 10px;
+	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
+	border: 3px solid #fff;
 }
 
 .mobileBar {
@@ -370,47 +385,29 @@ section#home h2 {
 	border-bottom: 2px solid #1596d3;
 }
 
-#projects .project {
-	width: 45%;
-	height: 300px;
-	margin: 2%;
+.prj-title > a {
 	display: inline-block;
-	border-radius: 10px;
-}
-
-#projects #prj01 { background: url('../img/projects/pr01.jpg'); background-size: cover; background-position: center center; }
-#projects #prj02 { background: url('../img/projects/pr02.jpg'); background-size: cover; background-position: center center; }
-#projects #prj03 { background: url('../img/projects/pr03.jpg'); background-size: cover; background-position: center center; }
-#projects #prj04 { background: url('../img/projects/pr04.jpg'); background-size: cover; background-position: center center; }
-
-#projects .project .content {
-	text-align: center;
+	margin-top: 5px;
 	color: white;
-	font-size: 30px;
-	background: #0008;
-	padding: 126px 0px;
-	border-radius: 10px;
-	opacity: 0;
-	transition: opacity 0.6s ease;
-	cursor: pointer;
+	background: #1a272d66;
+	padding: 3px 5px;
+	border-radius: 0px 5px 5px 0px;
+	font-size: 20px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-#projects #prj01:hover .content { opacity: 1; }
+.prj-title > a:hover {
+	background: #1a272d;
+	animation: hoverPaddingAnimation 0.5s infinite alternate;
+}
 
-#projects #prj02:hover .content { opacity: 1; }
-
-#projects #prj03:hover .content { opacity: 1; }
-
-#projects #prj04:hover .content { opacity: 1; }
-
-
-@media only screen and (max-width: 768px) {
-	#projects .project {
-		width: 96%;
-		height: 284px;
+@keyframes hoverPaddingAnimation {
+	from {
+		border-left: 0px solid #fff;
 	}
-	#projects .project .content {
-		font-size: 20px;
+	to {
+		border-left: 10px solid #fff;
 	}
 }
 

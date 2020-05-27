@@ -47,3 +47,30 @@ jQuery(function($) {
 	});
 });
 /* ============= MAIN JS HERE ============= */
+$(document).ready(function() {
+ 
+	$("#owl-demo").owlCarousel({
+	  jsonPath : '../uploads/OwlCarousel.json',
+	  jsonSuccess : customDataSuccess
+	});
+   
+	function customDataSuccess(data){
+	  var content = "";
+	  for(var i in data["items"]){
+		 
+		 var img = data["items"][i].img;
+		 var alt = data["items"][i].alt;
+		 var link = data["items"][i].link;
+		
+		 content += "<div class=\"prj-title\" alt=\""
+		 + alt + "\" style=\"background: url('"
+		 + img + "'); width: 300px; height: 200px; background-size: cover; border-radius: 5px; background-position: center;\"><a href=\"" + link + "\" >"
+		 + alt +"</a></div>"
+		 
+	  }
+	  $("#owl-demo").html(content);
+	}
+   
+  });
+
+  console.log("%c ♥ Hi! Don't do anything in this console! OK? :)))", "color: yellow; background: red; font-size: 35px; padding: 2px 5px");

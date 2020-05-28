@@ -64,7 +64,7 @@ $(document).ready(function() {
 		
 		 content += "<div class=\"prj-title\" alt=\""
 		 + alt + "\" style=\"background: url('"
-		 + img + "'); width: 300px; height: 200px; background-size: cover; border-radius: 5px; background-position: center;\"><a href=\"" + link + "\" >"
+		 + img + "'); height: 200px; background-size: cover; border-radius: 5px; background-position: center;\"><a href=\"" + link + "\" >"
 		 + alt +"</a></div>"
 		 
 	  }

@@ -397,6 +397,20 @@ section#home h2 {
 	transition: all 0.3s ease;
 }
 
+.prj-title {
+	width: 90%;
+}
+
+#owl-demo .prj-title:first-child {
+	margin-left: 2%;
+}
+
+@media only screen and (max-width: 480px) {
+	.prj-title {
+		width: 95%;
+	}
+}
+
 .prj-title > a:hover {
 	background: #1a272d;
 	animation: hoverPaddingAnimation 0.5s infinite alternate;

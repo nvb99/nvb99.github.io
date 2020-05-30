@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>My Uploads</title>
+        <link rel="shortcut icon" href="../img/ava.jpg">
+        <link rel="stylesheet" href="../css/owl.theme.css">
+        <link rel="stylesheet" href="../css/owl.carousel.css">
+        <link rel="stylesheet" href="../css/style.css" />
+        <style>
+            body {
+                background: #1a272d;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="../index.html"><div style="position: fixed; top: 5px; left: 5px; background: #11559955; padding: 10px; border-radius: 10px; color: white">HOME</div></a>
+        <section id="projects">
+            <h3><span>My Uploads</span></h3>
+            <div style="text-align: center; color: #fff;"><small>(Drag to see more!)</small></div>
+            <div id="owl-demo" class="owl-carousel" style="padding: 20px 0px;">
+            </div>
+        </section>
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function() {
+ 
+            $("#owl-demo").owlCarousel({
+            jsonPath : '../uploads/crt/carousel.json',
+            jsonSuccess : customDataSuccess
+            });
+
+            function customDataSuccess(data){
+                var content = "";
+                for(var i in data["items"]){
+                    
+                    var img = data["items"][i].img;
+                    var alt = data["items"][i].alt;
+                    var link = data["items"][i].link;
+                    
+                    content += "<div class=\"prj-title\" alt=\""
+                    + alt + "\" style=\"background: url('"
+                    + img + "'); height: 200px; background-size: cover; border-radius: 5px; background-position: center;\"></div>"
+                    
+                }
+                $("#owl-demo").html(content);
+            }
+
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+{
+    "items" : [
+      {
+        "img": "../img/crt/VPS2020Mentor.png",
+        "alt" : "VPS2020Mentor.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/CustomerJourney.png",
+        "alt" : "CustomerJourney.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/HowToBuildADigitalMarketingPlan_P1.png",
+        "alt" : "HowToBuildADigitalMarketingPlan_P1.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/HowToBuildADigitalMarketingPlan_P2.png",
+        "alt" : "HowToBuildADigitalMarketingPlan_P2.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/HowToBuildAMemorableBrand.png",
+        "alt" : "HowToBuildAMemorableBrand.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/HowToWriteContentForSocialMedia.png",
+        "alt" : "HowToWriteContentForSocialMedia.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/SocialMediaStrategy.png",
+        "alt" : "SocialMediaStrategy.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/StorytellingThroughOnlineVideos.png",
+        "alt" : "StorytellingThroughOnlineVideos.png",
+        "link" : "#"
+      },
+      {
+        "img": "../img/crt/YoutubeForPerformance.png",
+        "alt" : "YoutubeForPerformance.png",
+        "link" : "#"
+      }
+      
+    ]
+  }

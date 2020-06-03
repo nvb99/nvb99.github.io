@@ -370,6 +370,13 @@ section#home h2 {
 	}
 }
 
+#slideshow .owl-carousel .quotes-slide {
+	width: 98%;
+	padding: 1%;
+	border-radius: 15px;
+	cursor: all-scroll;
+}
+
 /* css_6. =============== SECTION PROJECTS ================ */
 #projects {
 	background: #1a272d;
@@ -427,7 +434,7 @@ section#home h2 {
 
 /* css_7. =============== SECTION ABOUT & CONTACT ================ */
 #contact {
-	background: #333;
+	background: rgb(26, 39, 45);
 }
 
 #contact .pure-group input, #contact .pure-group textarea {

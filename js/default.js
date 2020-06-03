@@ -73,4 +73,15 @@ $(document).ready(function() {
    
   });
 
+  $(document).ready(function(){
+	$(".owl-carousel").owlCarousel({
+		animateOut: 'slideOutDown',
+		animateIn: 'flipInX',
+		items:2,
+		margin:30,
+		stagePadding:30,
+		smartSpeed:450
+	});
+  });
+
   console.log("%c ♥ Hi! Don't do anything in this console! OK? :)))", "color: yellow; background: red; font-size: 35px; padding: 2px 5px");

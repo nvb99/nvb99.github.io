@@ -176,7 +176,7 @@ nav {
 	left: 0px;
 	justify-content: space-around;
 	align-items: center;
-	background: rgba(26, 39, 45, 0.9);
+	background: rgba(0, 29, 43, 0.9);
 	min-height: 50px;
 	box-shadow: 0px 0px 5px #000; /* left top blur scale */
 	line-height: 50px;
@@ -227,11 +227,12 @@ nav {
 
 .nav-links li:hover a {
 	color: #fff;
-	background: #000;
+	background: #1596d3;
 	padding: 3px 10px;
 	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
 	border: 3px solid #fff;
+	animation: txtAnimate 0.5s infinite alternate;
 }
 
 .mobileBar {
@@ -542,20 +543,22 @@ footer {
 .social-links a, .footer-links a {
 	text-decoration: none;
 	color: #ccc;
-	padding: 5px 10px;
-	background: #333;
+	padding-top: 7px;
+	background: #000;
 	display: inline-block;
-	width: 37px;
-	height: 37px;
+	width: 39px;
+	height: 39px;
 	text-align: center;
 	border-radius: 50%;
 	border: 1px solid #333;
 	margin: 5px 5px;
+	transition: all 0.3s ease;
 }
 
 .social-links a:hover, .footer-links a:hover {
 	color: #fff;
-	border: 1px solid #fff
+	border: 1px solid #fff;
+	box-shadow: 0px 0px 10px #ccc;
 }
 
 

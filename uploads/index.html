@@ -19,7 +19,7 @@
         <section id="projects">
             <h3><span>My Uploads</span></h3>
             <div style="text-align: center; color: #fff;"><small>(Drag to see more!)</small></div>
-            <div id="owl-demo" class="owl-carousel" style="padding: 20px 0px;">
+            <div id="owl-demo" class="owl-carousel" style="padding: 20px 0px; text-align: center;">
             </div>
         </section>
 
@@ -41,10 +41,8 @@
                     var alt = data["items"][i].alt;
                     var link = data["items"][i].link;
                     
-                    content += "<div class=\"prj-title\" alt=\""
-                    + alt + "\" style=\"background: url('"
-                    + img + "'); height: 200px; background-size: cover; border-radius: 5px; background-position: center;\"></div>"
-                    
+                    content +=
+                    "<img src=\"" + img + "\" style=\" border-radius: 10px;\"  alt=\"" + alt + "\" width=\"90%\" />";
                 }
                 $("#owl-demo").html(content);
             }

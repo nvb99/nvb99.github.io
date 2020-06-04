@@ -42,6 +42,8 @@ body {
     background: #fff;
 }
 
+
+
 .text-center {
 	text-align: center;
 }
@@ -554,4 +556,32 @@ footer {
 .social-links a:hover, .footer-links a:hover {
 	color: #fff;
 	border: 1px solid #fff
+}
+
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+.btn-animate {
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 20px;
+	text-decoration: none;
+	animation: txtAnimate 0.5s infinite alternate;
+	transition: all 0.3s ease-in-out;
+	color: #1596d3;
+	display: inline-block;
+}
+.btn-animate:hover {
+	background: #1596d3;
+	color: #fff;
+}
+
+@keyframes txtAnimate {
+	from {
+		box-shadow: 0px 0px 0px #ccc;
+		transform: scale(0.9);
+	}
+	to {
+		box-shadow: 0px 0px 10px #ccc;
+		transform: scale(1);
+	}
 }

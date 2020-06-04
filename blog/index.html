@@ -4,12 +4,12 @@
 	<title>NVB 99 Official - Blog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="src/img/logo.png">
+	<link rel="shortcut icon" href="../img/ava.jpg">
 	<link rel="stylesheet" href="lib/angular/angular-material.min.css">
 	<link rel="stylesheet" href="src/font-awesome/font-awesome.css">
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="src/style.css">
-
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Patrick+Hand&display=swap" rel="stylesheet">
 	<meta property="og:url"           content="http://nvb99.github.io/" />
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="NVB 99 Official - Blog" />
@@ -19,12 +19,15 @@
 <body class="body" ng-app="myApp" ng-controller="MyController">
 <div class="myWeb">
 		<!-- Posts Section -->
+		<div class="container" style="max-width: 500px; padding: 10px 0px 0px 0px; color: darkslategray; font-size: 30px; font-family: 'Patrick Hand', cursive;">
+			<marquee behavior="scroll" direction="left">CHÀO MỪNG BẠN ĐẾN VỚI BLOG CỦA NVB 99 OFFICIAL!</marquee>
+		</div>
 	<div class="jumbotron m-0 pt-3" style="background: none;">
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
-				<div class="p-3 bg-secondary m-0 text-light">
-					<a class="pl-2" href="../" title="Về trang chủ"><i style="color: #ccc;" class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
-					<span class="pl-3">NVB 99 Official - Blog</span></div>
+				<div class="p-3 bg-info m-0 text-light border border-light rounded">
+					<a class="pl-2" href="../" title="Về trang chủ"><i style="color: #ccc;" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+					<div style="display: inline; text-decoration: none; color: #ccc;" class="">Trở về</div></a></div>
 				<h3 class="mt-3">{{post_title}}</h3>
 				<div><small class="text-muted"><i class="fa fa-clock-o"></i> {{post_time}} | <i class="fa fa-tag"></i> {{post_tag}}</small></div>
 				
@@ -39,7 +42,7 @@
 			</div>
 			
 			<div class="col-lg-4 col-md-12" style="background: none !important;">
-				<div class="p-3 bg-secondary m-0 text-light">Tất cả bài viết</div>
+				<div class="p-3 bg-info m-0 text-light border border-light rounded">Tất cả bài viết</div>
 				<!-- Search Bar -->
 				<div class="p-3">
 					<input id="searchBar" class="form-control" ng-model="kwSearch" type="text" placeholder="Bạn muốn tìm gì?" />
@@ -54,14 +57,14 @@
 				<hr>
 				<div dir-paginate="post in posts|itemsPerPage:4|filter:kwSearch">
 					<div class="post clearfix">
-						<div style="width: 150px; height: 150px; background: url('{{post.image}}'); background-size: cover; float: left; margin: 8px; background-position: center;"></div>
+						<div style="width: 150px; height: 150px; border-radius: 10px; background: url('{{post.image}}'); background-size: cover; float: left; margin: 8px; background-position: center;"></div>
 
 						<a href="#" ng-click="readDetail(post)"><b>{{post.title}}</b></a>
 
 						<br>
 
 						<small>
-							<span class="text-secondary"><i class="fa fa-clock-o"></i> {{post.time}}</span>
+							<span class="text-secondary"><img src="/img/new.gif" alt="" width="25px" /> <i class="fa fa-clock-o"></i> {{post.time}}</span>
 						</small>
 
 						<p class="text-justify">{{post.summary}} <a href="#" ng-click="readDetail(post)"><i>Xem thêm <span class="fa fa-angle-double-right"></span></i> </a></p>
@@ -78,7 +81,11 @@
 </div>
 <!-- End Posts Section -->
 
-<a title="Về đầu trang" href="#" class="btn btn-danger d-inline" style="position: fixed; bottom: 2px; right: 2px;" ><i class="fa fa-chevron-up"></i></a>
+<a href="#" id="backToTop" title="Về đầu trang"
+            style="width: 60px; height: 60px; display: inline-block;
+                position: fixed; bottom: 15px; right: 15px;
+                background: url('../img/to-top-btn.png'); background-size: cover; transition: all 0.5s ease;">
+                </a>
 
 </div>
 <script type="text/javascript" src="lib/angular/angular-1.5.min.js"></script>  
@@ -124,7 +131,7 @@ app.controller('MyController',  function($scope){
 			title: "#P20002 | Windows 10 Tips - Có gì mới?",
 			image: "src/img/post/win-10-tips.jpg",
 			tag: "Thủ Thuật Máy Tính, Windows 10 Tips",
-			time: "Vừa xong",
+			time: "10 phút trước",
 			summary: "Nếu có chức năng nào đó trên thiết bị của bạn không hoạt động, hãy chạy “Recommended troubleshooting” để có thể tìm và khắc phục sự cố cho bạn. Cách truy nhập vào chức năng...",
 			content: "<p>\n1. Chức năng khắc phục sự cố<br>\n- Nếu có chức năng nào đó trên thiết bị của bạn không hoạt động, hãy chạy “Recommended troubleshooting” để có thể tìm và khắc phục sự cố cho bạn. Cách truy nhập vào chức năng: Settings > Update & Security > Troubleshoot\n</p>\n\n<p>\n2. Chức năng Tùy chỉnh độ sáng màn hình <br>\n- Ở Laptop hoặc Tablet của bạn, chọn Action Center ở thanh Taskbar sau đó chọn Expand (mở rộng), việc còn lại là kéo thanh trượt để điều chỉnh độ sáng đến mức sáng mà bạn muốn.\n\n</p>\n\n<p>\n3. Dark Mode hoặc Light Mode cho hiển thị cài đặt của bạn. <br>\n- Chọn Start > Settings > Personalization > Colors. Ở đây bạn có thể chọn Light (sáng) hoặc Dark (tối) mode phù hợp với mình nhé!\n\n</p>\n\n<p>\n4. Thêm emoji từ bàn phím <br>\n- Nhấn tổ hợp Windows + (.) để mở Emoji Panel. Dùng kaomojis để những dòng chữ khô khan của bạn trở nên sống động hơn.\n\n</p>\n\n<p>\n5. Lưu trữ tự động các thư mục quan trọng <br>\n- Lưu trữ Tài liệu, Hình ảnh, hay những tập tin ở Desktop để chúng được bảo vệ hoàn toàn phòng khi mất thiết bị của bạn. Ở phía bên phải của thanh Taskbar, bạn chọn OneDrive (biểu tượng đám mây) > More > Settings. Ở tab Autosave, bạn chọn Update folders và chỉ định thư mục nào bạn muốn tự động đồng bộ.\n\n</p>\n\n<p>\n6. Đặt giờ hoạt động để máy tính biết thời gian bạn thường sử dụng thiết bị <br>\n- Máy tính sẽ không tự khởi động lại thiết bị của bạn trong thời gian này. Truy cập theo đường dẫn Settings > Windows Update > Change Active Hours.\n\n</p>\n\n<p>\n7. Tạm dừng cập nhật đến một thời gian nào đó thuận tiện hơn <br>- Để tạm dừng Update (cập nhật) cho thiết bị của bạn, Bạn chọn Start > Settings > Update & Security > Windows Update, sau đó chọn Pause updates. <br>- Khi bạn đã đạt đến giới hạn trì hoãn, bạn phải hoàn tất bản cập nhật mới nhất mới có thể tiếp tục đặt lịch tạm hoãn tiếp theo.\n\n</p>\n\n<p>\n8. Làm cho mọi thứ trên màn hình to hơn <br>\n- Để hiển thị chữ to hơn trên màn hình của bạn, bạn chọn Start > Settings > Ease of Access > Display, sau đó điều chỉnh thanh trượt đến kích thước chữ bạn muốn ở dưới tiêu đề \"Make text bigger\". <br>\n- Còn nếu bạn muốn tất cả mọi thứ đều lớn hơn, bạn có thể kéo xuống dưới dòng \"Make everything bigger\" và chọn một tùy chọn cho size màn hình phù hợp với nhu cầu của bạn.\n</p>\n\n<p>\n9. Bộ lọc màu: <br>\nNếu bạn nhạy cảm với ánh sáng, bạn có thể điều chỉnh màu sắc hiển thị đơn giản hơn bằng cách vào đường dẫn: Start > Settings > Ease of Access > Color filters. Sau đó chọn một bộ lọc phù hợp.\n</p>\n\n<p>\n10. Dán dữ liệu từ vùng lưu trữ đám mây tạm thời (Clipboard): <br>\n- Sao chép hình ảnh và chữ từ một máy tính sang một thiết bị khác thông qua Cloud-based Clipboard (bộ nhớ đám mây tạm thời). <br>\n- Bạn chọn Start > Settings > System > Clipboard. Đăng nhập tài khoản Microsoft của bạn và sau đó sử dụng các nút bật để bật cả lịch sử Clipboard và Đồng bộ hóa trên các thiết bị. <br>\n- Bạn cũng có thể sử dụng phím tắt Win + V để dễ dàng truy cập clipboard của mình.\n\n</p>\n\n<p>\n11. Làm cho con trỏ chuột của bạn dễ nhìn hơn <br>\n- Nếu bạn gặp khó khăn khi phát hiện con trỏ trên màn hình, hãy làm cho nó lớn hơn hoặc thay đổi màu sắc. Chọn Start > Settings > Ease of Access > Cursor & pointer. Và điều chỉnh con trỏ chuột theo ý muốn của bạn.\n</p>"
 		},
@@ -132,7 +139,7 @@ app.controller('MyController',  function($scope){
 			title: "#P20001 | Task Manager là gì, sử dụng Task Manager như thế nào?",
 			image:"src/img/post/task-manager.png",
 			tag:"Thủ Thuật Máy Tính, Windows 10",
-			time:"Vừa xong",
+			time:"20 phút trước",
 			summary:"Bên cạnh có thể buộc kết thúc bất kỳ một chương trình, phần mềm nào đang chạy (bằng cách chuột phải và chọn End task), cũng như để xem các chương trình chiếm bao nhiêu tài nguyên ...",
 			content: "<p><strong>Task Manager là gì?</strong> - là tiện ích được tích hợp trên hệ điều hành Windows, hiển thị cho người dùng các chương trình đang chạy trên máy tính. Ngoài ra Task Manager cũng cung cấp cho người dùng kiểm soát một số hạn chế trên các tác vụ đang chạy.</p>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"text-center p-2\"><img src=\"https://www.wikihow.com/images/f/f5/Open-Windows-Task-Manager-Step-30.jpg\" alt=\"\" class=\"imgInPost\"></div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<p><strong>Sử dụng Task Manager để làm gì?</strong> - xem các ứng dụng, chương trình và dịch vụ nào đang chạy trên hệ thống. Bên cạnh có thể buộc kết thúc bất kỳ một chương trình, phần mềm nào đang chạy <em>(bằng cách chuột phải và chọn End task)</em>, cũng như để xem các chương trình chiếm bao nhiêu tài nguyên phần cứng trên máy tính, những chương trình và dịch vụ nào khởi động cùng hệ thống, ...</p>\n\n\t\t\t\t\t\t<p><strong>Khởi động Task Manager</strong> - có rất nhiều cách để khởi động Task Manager. Sau đây là một số cách bạn có thể tùy chọn:\n\t\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tNhấn tổ hợp phím <b>Ctrl + Alt + Delete</b> trên bàn phím, sau đó chọn <b>Task Manager</b>. Bạn có thể dùng tay trái nhấn giữ Ctrl và Alt, tay phải nhấn phím Delete (phía trên phím Backspace) là sẽ ra giao diện như bên dưới:<br>\n\t\t\t\t\t\t\t\t\t<p class=\"text-center\"><img src=\"https://www.iseepassword.com/images/windows/ctrl-alt-delete-screen.jpg\" alt=\"\" class=\"imgInPost\"></p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tCó vẻ như với mình là cách nhanh nhất khi bạn nhấn tổ hợp phím <b>Ctrl + Shift + ESC</b>, Task Manager sẽ hiển thị ngay sau đó!\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tĐầu tiên, bạn nhấn phím <i class=\"fa fa-windows\" aria-hidden=\"true\"></i> (hoặc click chuột vào biểu tượng <i class=\"fa fa-windows\" aria-hidden=\"true\"></i> phía góc trái bên dưới màn hình), sau đó nhập từ khóa \"task manager\" hoặc gọn hơn là \"taskmgr\", khi đó danh sách tìm kiếm sẽ xuất hiện Task Manager, việc của bạn chỉ là khởi động Task Manager lên thôi!<br>\n\t\t\t\t\t\t\t\t\t<p class=\"text-center\"><img src=\"https://cdn-cms.f-static.net/uploads/3094187/2000_5e4d542f1dd91.jpg\" alt=\"\" class=\"imgInPost\"></p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tNếu bạn là dân IT, hay đơn giản là bạn muốn ngầu một tí, thì bạn có thể mở cmd lên và nhập \"taskmgr\" sau đó Enter, tiện ích cũng sẽ hiển thị lên màn hình ngay nhé!<br>\n\t\t\t\t\t\t\t\t\t<p class=\"text-center\"><img src=\"https://cdn-cms.f-static.net/uploads/3094187/2000_5e4d542f1a624.jpg\" alt=\"\" class=\"imgInPost\"></p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tMột cách khác bạn cũng có thể khởi động tiện ích này thông qua Cửa sổ Run. Bạn nhấn tổ hợp <i class=\"fa fa-windows\" aria-hidden=\"true\"></i> + R, sau đó nhập \"taskmgr\", tiếp tục Enter -> xem kết quả!<br>\n\t\t\t\t\t\t\t\t\t<p class=\"text-center\"><img src=\"https://www.trickyways.com/wp-content/uploads/2013/11/taskmanager-run-command.png\" alt=\"\" class=\"imgInPost\"></p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\tMột cách khác nhanh không thua kém gì cách 2, bạn chuột phải lên thanh Taskbar (thanh làm việc mặc định bên dưới màn hình) sau đó chọn <b>Task Manager</b>. Đây cũng là cách mà mình hay sử dụng nhất!<br>\n\t\t\t\t\t\t\t\t\t<p class=\"text-center\"><img src=\"https://cdn-cms.f-static.net/uploads/3094187/2000_5e4d542f26583.jpg\" alt=\"\" class=\"imgInPost\"></p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t<p>Hmm, mình thấy các cách bên trên là phổ biến nhất rồi ý, các bạn có thể lựa chọn cách nào phù hợp với bản thân và sử dụng một cách phù hợp nhé! Chúc các bạn thành công!</p>\n\t\t\t\t\t\t</p>"
 		}

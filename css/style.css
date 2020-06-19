@@ -588,3 +588,50 @@ footer {
 		transform: scale(1);
 	}
 }
+
+/* ===== Advert ===== */
+.advert {
+	position: fixed;
+	width: 80%;
+	height: 80vh;
+	overflow: scroll;
+	margin: 10vh 10% 10vh 10%;
+	background: #fff;
+	z-index: 99999;
+	border-radius: 20px;
+	padding: 20px;
+	border: 5px dashed orange;
+	animation: changeBorderColor 0.2s infinite alternate;
+}
+
+.advert .btn-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 55px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: #f00;
+	font-weight: bold;
+	color: yellow;
+	border-radius: 20px;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	border: 1px solid #fff;
+	z-index: 999999;
+}
+.advert .btn-close:hover {
+	background: #fff;
+	color: #f00;
+	border-color: #f00;
+}
+
+@keyframes changeBorderColor {
+	from {
+		border-color: orange;
+	}
+	to {
+		border-color: orangered;
+	}
+}

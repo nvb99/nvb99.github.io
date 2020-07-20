@@ -152,17 +152,30 @@ header {
 
 /* Pagination Style */
 .pagination {
-  background: #ddd;
-  font-size: 18px;
-  border: 2px solid #1696d3;
+  background: none;
+  padding: 5px 0px;
+  font-size: 16px;
   float: right;
+  border: 2px solid #00f6;
 }
 li.ng-scope {
   list-style: none;
   float: left;
-  padding: 0px 8px;
-  margin: 2px;
+  padding: 0px 5px;
+  margin: 0px;
   font-weight: bold;
+}
+li.ng-scope a {
+  color: white;
+  border-radius: 50%;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+li.ng-scope a:hover {
+  background: #fff;
+  color: lightblue;
 }
 /* End Pagination Style */
 

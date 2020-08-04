@@ -11,11 +11,6 @@
         "link" : "#"
       },
       {
-        "img": "https://nvb99.github.io/blog/src/img/slider02.jpg",
-        "alt" : "Slider 02",
-        "link" : "#"
-      },
-      {
         "img": "https://nvb99.github.io/blog/src/img/slider03.jpg",
         "alt" : "Slider 03",
         "link" : "#"
@@ -26,10 +21,15 @@
         "link" : "#"
       },
       {
-        "img": "https://nvb99.github.io/blog/src/img/slider04.jpg",
-        "alt" : "Slider 04",
+        "img": "https://nvb99.github.io/blog/src/img/slider05.jpg",
+        "alt" : "Slider 05",
         "link" : "#"
       },
+      {
+        "img": "https://nvb99.github.io/blog/src/img/slider06.jpg",
+        "alt" : "Slider 06",
+        "link" : "#"
+      }
       
     ]
   }

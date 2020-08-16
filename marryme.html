@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .btn {
+            border: 1px solid #333;
+            display: inline-block;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 10px;
+        }
+        .btn-yes, .btn-no {
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        .btn-yes:hover {
+            background: #f00;
+            color: #fff;
+        }
+        .main-small {
+            display:none;
+        }
+        @media only screen and (max-width: 768px) {
+            .main {
+                display: none;
+            }
+            .main-small {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="main-small text-center">
+        MỞ MÁY TÍNH LÊN ĐI!<br/> ANH MUỐN NÓI VỚI EM ĐIỀU NÀY! ^^
+    </h2>
+    <div class="main">
+        <h2 class="text-center">
+            LÀM NGƯỜI YÊU ANH NHÉ BAYBE
+        </h2>
+        <div class="text-center">
+            <span class="btn btn-yes" onclick="alert('Kệ bạn chớ ahihi :)))')">ĐỒNG Ý 💗 </span>
+            <span class="btn btn-no" onmouseover="this.style.display = 'none'">KHÔNG!!</span>
+        </div>
+    </div>
+</body>
+</html>

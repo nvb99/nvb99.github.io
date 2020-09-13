@@ -1,41 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="vi-vn">
     <head>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
 	    <title>Tôi Là Dân IT</title>
-        <link rel="shortcut icon" href="img/ava.jpg">
-        <link rel="stylesheet" href="css/pure.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="./uploads/icon.png">
+        <link rel="stylesheet" href="./libs/css/pure.css" />
+        <link rel="stylesheet" href="./libs/css/style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.theme.css">
-        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="./libs/css/owl.theme.css">
+        <link rel="stylesheet" href="./libs/css/owl.carousel.css">
 	    
     </head>
     <body>
         <!-- ============= PRE-LOADER ============= -->
         <div class="preload">
-            <img id="airplane" src="img/prelodr/airplane.png" alt="airplane">
+            <img id="airplane" src="./uploads/img/prelodr/airplane.png" alt="airplane">
             <h3>Hạ cánh trong giây lát! Bây giờ là <span id="crTime"></span></h3>
-            <img class="cloud1" src="img/prelodr/cloud.png" alt="cloud1">
-            <img class="cloud2" src="img/prelodr/cloud.png" alt="cloud2">
-            <img class="cloud3" src="img/prelodr/cloud.png" alt="cloud3">
-        </div>
-
-        <!-- ============= ADVERTISEMENTS ============= -->
-        <div class="advert" style="display:none">
-            <div class="btn-close" title="Close">X</div>
-            <div class="content">
-                <h2>ADVERTISEMENT</h2>
-                <hr>
-                <p>Liên hệ Quảng cáo:
-                    <div>- Điện thoại: (097) 954 19 34</div>
-                    <div>- Email: tech.nvb99@gmail.com</div>
-                </p>
-
-                <p style="text-align: center;"><img src="img/prelodr/airplane.png" alt="plan" width="80%" style="max-width: 300px;" /></p>
-            </div>
+            <img class="cloud1" src="./uploads/img/prelodr/cloud.png" alt="cloud1">
+            <img class="cloud2" src="./uploads/img/prelodr/cloud.png" alt="cloud2">
+            <img class="cloud3" src="./uploads/img/prelodr/cloud.png" alt="cloud3">
         </div>
 
         <!-- ============= CUSTOM BACKGROUND ============= -->
@@ -46,13 +31,16 @@
         <!-- ============= MAIN PAGE ============= -->
         <section class="nav">
             <nav>
-                <div class="brand" onclick="window.open('#', '_self')">Tôi Là<span> Dân IT</span>
+                <div class="brand" onclick="window.open('#', '_self')">
+                    <img style="height: 65px; margin-bottom: -35px; padding: 2px 10px" src="./uploads/ava_round.png" />
+                    Tôi Là Dân IT
+                    <span style="position: absolute; top: 20px; left: 142px; font-size: 13.5px">fb.com/nvb99.fp</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home"><i class="fa fa-home"></i> HOME</a></li>
-                    <li><a href="/shop"><i class="fa fa-briefcase"></i> SHOP</a></li>
+                    <!-- <li><a href="#home"><i class="fa fa-home"></i> TRANG CHỦ</a></li> -->
+                    <li><a href="#services"><i class="fa fa-briefcase"></i> SERVICES</a></li>
                     <li><a href="#contact"><i class="fa fa-address-card"></i> CONTACT</a></li>
-                    <li><a href="/blog"><i class="fa fa-rss"></i> MY BLOG</a></li>
+                    <li><a href="/blog"><i class="fa fa-feed"></i> BLOG</a></li>
                 </ul>
                 <div class="mobileBar">
                     <div class="bar1"></div>
@@ -70,51 +58,33 @@
                     </h2>
                     <div class="line-break"></div>
                     <h4 id="tagLine" class="text-light">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i> <i class="fa fa-angle-right" aria-hidden="true"></i> WELCOME TO "TÔI LÀ DÂN IT" WEBSITE!
+                        <i class="fa fa-angle-left" aria-hidden="true"></i> <i class="fa fa-angle-right" aria-hidden="true"></i> TRẢI NGHIỆM DỊCH VỤ
                         <i class="fa fa-code" aria-hidden="true"></i>
                     </h4>
                     <div class="line-break"></div>
-                    <div class="call-action"><a href="#slideshow"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+                    <div class="call-action"><a href="#services"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
                 </div>
             </section>
-            <section id="slideshow" style="padding-top: 50px; background:#1a272d;">
-                    <p class="text-center"><a href="/blog" class="btn-animate"><i class="fa fa-rss"></i> TRUY CẬP BLOG</a></p>
-                <br>
-                <div class="owl-carousel">
-                    <div> <img class="quotes-slide" src="blog/img/slider01.jpg" alt="slider01"> </div>
-                    <div> <img class="quotes-slide" src="blog/img/slider02.jpg" alt="slider02"> </div>
-                    <div> <img class="quotes-slide" src="blog/img/slider03.jpg" alt="slider03"> </div>
-                    <div> <img class="quotes-slide" src="blog/img/slider04.jpg" alt="slider04"> </div>
-                    <div> <img class="quotes-slide" src="blog/img/slider05.jpg" alt="slider05"> </div>
-                    <div> <img class="quotes-slide" src="blog/img/slider06.jpg" alt="slider06"> </div>
-                    
-                  </div>
-            </section>
 
-            <section id="projects">
-                <h3><span>Góc chia sẻ</span></h3>
+            <section id="services" style="background: #336">
+                <h3><span>TẤT CẢ DỊCH VỤ</span></h3>
                 <div style="text-align: center; color: #fff;"><small>(Trượt để xem thêm!)</small></div>
                 <div id="owl-demo" class="owl-carousel" style="padding: 20px 0px;">
                 </div>
             </section>
-            
+
             <section id="contact">
                 <h3><span>Liên hệ tôi</span></h3>
                 <div class="content">
-                    <div class="half" id="profile">
-                        <div class="avar"></div>
-                        <p>
-                            <b>+ SĐT</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('tel:+84979541934')">(097) 954 19 34</b> <br>
-                            <b>+ Email</b>: <b style="cursor: pointer; color: lightblue;" onclick="window.open('mailto:tech.nvb99@gmail.com')">tech.nvb99@gmail.com</b> 
-
-                            <hr style="width: 100px; margin: 10px auto;">
-                            <p style="text-align: justify;">
-                                Xin chào mọi người. Tôi là Bảy, là dân IT, nickname là Jason. Chào mừng mọi người đã đến với website cá nhân của tôi! <i class="fa fa-heart"></i></p>
-                            <p class="text-center" style="margin-top: 20px;">
-                                <a href="uploads/MyCV.pdf" class="my-btn" style="background: #1596d3; color: #fff; padding: 5px 20px; border-radius: 5px; text-decoration: none;">CV của tôi</a>
-                                <!-- <a href="uploads/" class="my-btn" style="margin-left: 5px; background: #1596d3; color: #fff; padding: 5px 20px; border-radius: 5px; text-decoration: none;">Danh sách chứng chỉ</a> -->
-                            </p>
-                        </p>
+                    <div class="half">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="420" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Phan%20V%C4%83n%20Tr%E1%BB%8B%2C%20B%C3%ACnh%20Th%E1%BA%A1nh&t=k&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                            <style>
+                                .mapouter{position:relative;text-align:right;height:420px;max-width:500px;}.gmap_canvas {border-radius: 10px;overflow:hidden;background:none!important;height:420px;max-width:500px;}
+                                </style>
+                        </div>
                     </div>
                     
                     <div class="half">
@@ -165,7 +135,7 @@ action="https://script.google.com/macros/s/AKfycbxzAmjUvyhmcGTmC3Rtwkb9ftFZsWVpH
             <a href="#" id="backToTop" title="Về đầu trang"
             style="width: 60px; height: 60px; display: inline-block;
                 position: fixed; bottom: 15px; left: 15px;
-                background: url('/img/to-top-btn.png'); background-size: cover; transition: all 0.5s ease;">
+                background: url('./uploads/img/to-top-btn.png'); background-size: cover; transition: all 0.5s ease;">
                 </a>
             
             <div class="social-links">
@@ -212,26 +182,26 @@ action="https://script.google.com/macros/s/AKfycbxzAmjUvyhmcGTmC3Rtwkb9ftFZsWVpH
         logged_in_greeting="Xin chào! Tôi có thể giúp gì cho bạn?"
         logged_out_greeting="Xin chào! Tôi có thể giúp gì cho bạn?">
         </div>
-        <script src="js/jquery.js"></script>
-        <script src="js/default.js"></script>
-        <script src="js/plugin.min.js"></script>
-        <script src="js/animation.js"></script>
-        <script src="js/typed.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+        <script src="./libs/js/jquery.js"></script>
+        <script src="./libs/js/plugin.min.js"></script>
+        <script src="./libs/js/animation.js"></script>
+        <script src="./libs/js/typed.js"></script>
+        <script src="./libs/js/owl.carousel.js"></script>
+        <script data-cfasync="false" type="text/javascript" src="./libs/js/form-submission-handler.js"></script>
         <script>
             var typed = new Typed("#typer", {
                 strings: [
-                    "Xin chào!",
-                    "Tôi là Bảy",
-                    "Tôi là dân IT",
-                    "Cảm ơn bạn đã ghé thăm blog!"
+                    "Bạn đang cần tạo CV?",
+                    "Bạn đang cần thiết kế Poster?",
+                    "Bạn đang cần tạo Blog?",
+                    "...",
+                    "Tôi sẽ giúp bạn!"
                 ],
                 typeSpeed: 60,
                 backSpeed: 35,
                 loop: true
             });
         </script>
-        
+        <script src="./libs/js/default.js"></script>
     </body>
 </html>

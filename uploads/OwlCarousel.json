@@ -1,22 +1,22 @@
 {
     "items" : [
       {
-        "img": "../img/projects/pr01.jpg",
+        "img": "uploads/img/services/svc01.jpg",
         "alt" : "Programing",
         "link" : "https://www.youtube.com/playlist?list=PLytBRj1mBfhR4WEGTjSm0fCFRGNpInNgr"
       },
       {
-        "img": "../img/projects/pr02.jpg",
+        "img": "uploads/img/services/svc02.jpg",
         "alt" : "Art & Design",
         "link" : "https://www.youtube.com/playlist?list=PLytBRj1mBfhTsb6pAxm-40QTtjgRD9RI4"
       },
       {
-        "img": "../img/projects/pr03.jpg",
+        "img": "uploads/img/services/svc03.jpg",
         "alt" : "Tips & Trick",
         "link" : "https://www.youtube.com/playlist?list=PLytBRj1mBfhQhvYYx-Lo_vMtKyL6nrtkF"
       },
       {
-        "img": "../img/projects/pr04.jpg",
+        "img": "uploads/img/services/svc04.jpg",
         "alt" : "Coming soon",
         "link" : "/"
       }

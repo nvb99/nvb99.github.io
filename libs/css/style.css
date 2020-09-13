@@ -8,7 +8,7 @@
 	css_3		Nav bar css
 	css_4		Main css
 	css_5		section main
-	css_6		section projects
+	css_6		section services
 	css_7		section about & contact
 	css_8		footer css
 */
@@ -145,7 +145,7 @@ body {
 /* css_2. ======================== CUSTOM BACKGROUND ======================== */
 #star {
 	z-index: -1;
-	background: url('../img/bg-main.jpg');
+	background: url('../../uploads/img/bg-main.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -157,7 +157,7 @@ body {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -176,7 +176,7 @@ nav {
 	align-items: center;
 	background: rgba(0, 29, 43, 0.9);
 	min-height: 50px;
-	box-shadow: 0px 0px 5px #000; /* left top blur scale */
+	box-shadow: 0px 0px 7px #000; /* left top blur scale */
 	line-height: 50px;
     z-index: 9999;
     transition: all 1s ease-in-out;
@@ -225,11 +225,8 @@ nav {
 
 .nav-links li:hover a {
 	color: #fff;
-	background: #1596d3;
 	padding: 3px 10px;
-	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
-	border: 3px solid #fff;
 	animation: txtAnimate 0.5s infinite alternate;
 }
 
@@ -306,7 +303,7 @@ nav {
 }
 
 #typer {
-	color: #1596d3;
+	color: #ddd;
 }
 
 @keyframes callAction {
@@ -358,7 +355,7 @@ section#home h2 {
 	font-size: 22px;
 	transform: scale(.8);
 	transition: all 0.3s ease;
-	color: #1596d3;
+	color: #0ee;
 }
 
 #tagLine:hover {
@@ -378,18 +375,18 @@ section#home h2 {
 	cursor: all-scroll;
 }
 
-/* css_6. =============== SECTION PROJECTS ================ */
-#projects {
+/* css_6. =============== SECTION services ================ */
+#services {
 	background: #1a272d;
 }
-#projects h3 {
+#services h3 {
 	padding-top: 50px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 30px;
 	color: white
 }
-#projects h3 span {
+#services h3 span {
 	border-bottom: 2px solid #1596d3;
 }
 

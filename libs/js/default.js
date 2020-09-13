@@ -49,10 +49,6 @@ jQuery(function($) {
 /* ============= MAIN JS HERE ============= */
 $(document).ready(function() {
  
-	document.querySelector(".advert .btn-close").addEventListener('click', () => {
-		document.querySelector('.advert').style.display = 'none';
-	})
-
 	$("#owl-demo").owlCarousel({
 	  jsonPath : '../uploads/OwlCarousel.json',
 	  jsonSuccess : customDataSuccess

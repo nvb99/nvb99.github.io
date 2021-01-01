@@ -1,5 +1,6 @@
 body {
     background: #000;
+    min-width: 360px;
 }
 
 .container {
@@ -13,9 +14,7 @@ body {
     width: 600px;
     height: 200px;
     background: url("images/bg.png");
-    background-size: 750px;
-    animation: bg-moving 3s infinite alternate;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .score {
@@ -36,15 +35,6 @@ body {
     height: 10px;
     background: rgba(68, 36, 0);
     z-index: 1;
-}
-
-@keyframes bg-moving {
-    from {
-        background-size: 600px;
-    }
-    to {
-        background-size: 650px;
-    }
 }
 
 #dino {
@@ -87,9 +77,24 @@ body {
 
 @keyframes block {
     0% {
-        left: 580px;
+        left: 100%;
     }
     100% {
-        left: -10px;
+        left: 0%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .game {
+        width: 100vw;
+    }
+    #cactus {
+        animation: block 2.5s linear infinite;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #cactus {
+        animation: block 1.5s linear infinite;
     }
 }

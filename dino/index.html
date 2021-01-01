@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump Game 2021</title>
+    <link rel="shortcut icon" href="images/character2.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="game">
+            <div id="roadLine"></div>
+            <div id="dino"></div>
+            <div id="cactus"></div>
+            <div class="score">Hi, <span id="player" style="color: white">Player</span> |
+                Your score: <b style="color: yellow" id="score">0</b> | <i>Help: Press any key to jump!</i></div>
+        </div>
+    
+        <!--
+            Sound Effects:
+            >> bg-music
+            >> jump sound
+            >> game over sound
+        -->
+        <audio style="display: none;" autoplay="true" loop="true"> <!--Source the audio file. -->
+            <source src="audio/bg-music.mp3" type="audio/mp3">
+        </audio>
+    
+        <audio id="jumpSound" style="display: none;" autostart="false"> <!--Source the audio file. -->
+            <source src="audio/jump.mp3" type="audio/mp3">
+        </audio>
+    
+        <audio id="gameOverSound" style="display: none;" autostart="false"> <!--Source the audio file. -->
+            <source src="audio/game-over.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    
+    <script src="main.js"></script>
+    <footer
+    style="position: fixed; bottom: 0; left: 0; text-align: center;
+    width: 100%; padding: 10px; background: chartreuse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        &copy; 2021 by <a href="https://fb.com/nvb99">@nvb99</a>
+    </footer>
+</body>
+</html>

@@ -39,23 +39,25 @@ body {
 
 #dino {
     position: relative;
-    background-image: url("images/character2.gif");
-    width: 40px;
-    height: 60px;
-    background-size: 40px;
+    background-image: url("images/actor.gif");
+    border-radius: 10px;
+    width: 45px;
+    height: 40px;
+    background-size: 40px 45px;
     background-repeat: no-repeat;
-    top: 130px;
+    top: 150px;
     z-index: 1;
 }
 
 #cactus {
     position: relative;
-    width: 10px;
-    height: 25px;
-    top: 105px;
-    left: 580px;
-    background-image: url("images/catus.png");
-    background-size: 10px 25px;
+    width: 20px;
+    height: 30px;
+    top: 118px;
+    background-image: url("images/sunf.png");
+    background-size: 20px 30px;
+    border-radius: 50%; 
+    background-repeat: no-repeat;
     animation: block 3s linear infinite;
 }
 
@@ -64,15 +66,15 @@ body {
 }
 
 @keyframes jump {
-    0% { top: 115px; }
+    0% { top: 150px; }
 
-    30% { top: 85px; }
+    30% { top: 105px; }
 
-    50% { top: 65px; }
+    50% { top: 85px; }
 
-    75% { top: 85px; }
+    75% { top: 105px; }
 
-    100% { top: 115px; }
+    100% { top: 150px; }
 }
 
 @keyframes block {

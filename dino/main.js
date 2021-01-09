@@ -27,7 +27,7 @@ isAlive = setInterval(() => {
         window.getComputedStyle(cactus).getPropertyValue("left")
         );
 
-    if (cactusLeft <= 40 && cactusLeft > 0 && dinoTop >= 130) {
+    if (cactusLeft <= 35 && cactusLeft > 0 && dinoTop >= 120) {
         gameOverSound.play();
         alert("Game Over! Your score: " + ((cr_score > 0) ? cr_score -1 : "0"));
         cr_score = 0;
